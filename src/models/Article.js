@@ -1,4 +1,3 @@
-//黃
 const db = require(__dirname + "/../modules/mysql2-connect");
 
 // CRUD
@@ -116,7 +115,7 @@ class Article {
   static async getItems(params = {}) {}
 
   // 讀取單筆
-  static async getRows(id) {
+  static async getRow(id) {
     if (!id) return null;
     let sql = "SELECT * FROM `article` WHERE `id`=?";
     let [r] = await db.query(sql, [id]);

@@ -43,7 +43,7 @@ router.get("/all", async (req, res) => {
 // });
 // 取得單項
 router.get("/:id", async (req, res) => {
-  let p = await Article.getRows(req.params.id);
+  let p = await Article.getRow(req.params.id);
   res.json(p);
 });
 
